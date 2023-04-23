@@ -1,0 +1,117 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+thead {
+    background-color: rgb(108, 121, 224);
+}
+
+thead th {
+    color: white;
+    border: 1px solid black;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+tr td.table-data {
+    min-width: 1px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
+#footer-container {
+    margin-top: 30px;
+    background-color: rgb(200, 100, 200);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer.footer p {
+    font-weight: 400;
+}
+
+footer.footer a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (min-width:320px) and (max-width:376px) {
+    img.emp-img {
+        width: 30vw;
+        height: auto;
+    }
+    #emp-profile-picture {
+        height: 35vw;
+        width: 35vw;
+    }
+    tr td.table-data {
+        max-width: 60vw;
+    }
+}
+
+@media screen and (min-width:375px) and (max-width:426px) {
+    img.emp-img {
+        width: 28vw;
+        height: auto;
+    }
+    #emp-profile-picture {
+        height: 30vw;
+        width: 30vw;
+    }
+    tr td.table-data {
+        max-width: 50vw;
+    }
+}
+
+@media screen and (min-width:426px) and (max-width:769px) {
+    img.emp-img {
+        width: 20vw;
+        height: auto;
+    }
+    #emp-profile-picture {
+        height: 25vw;
+        width: 25vw;
+    }
+    tr td.table-data {
+        max-width: 30vw;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1025px) {
+    img.emp-img {
+        width: 15vw;
+        height: auto;
+    }
+    #emp-profile-picture {
+        height: 20vw;
+        width: 20vw;
+    }
+    tr td.table-data {
+        max-width: 20vw;
+    }
+}
+
+@media screen and (min-width:1025px){
+    img.emp-img {
+        width: 10vw;
+        height: auto;
+    }
+    #emp-profile-picture {
+        height: 16vw;
+        width: 16vw;
+    }
+    tr td.table-data {
+        max-width: 17vw;
+    }
+}
