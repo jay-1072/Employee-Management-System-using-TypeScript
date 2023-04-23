@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee | view</title>
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- bootstrap style  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+        </script>
+
+    <!-- my style  -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+
+    <!-- my script -->
+    <script defer type="module" src="./js/viewEmployee.js"></script>
+</head>
+
+<body>
+    <!-- navbar started -->
+    <nav class="navbar sticky-top navbar-expand-lg" style="background-color: rgb(200, 100, 200); min-width: 100%;">
+        <div class="container-fluid">
+            <!-- navbar brand -->
+            <a class="navbar-brand" href="#" style="font-size: 100%; color: white; font-weight: 500;">
+                Employee Management System
+            </a>
+        </div>
+    </nav>
+    <!-- navbar ended -->
+
+    <div id="success-alert" style="position: absolute; top: 100px; right: 0; z-index: 1;">
+    </div>
+
+    <div class="card container my-5" style="width: 100%; height: 100%;">
+
+        <div class="mt-4 mb-4 text-center">
+            <img id="emp-profile-picture" src="" style="border-radius: 50%; border: 1px solid black;" alt="...">
+        </div>
+
+        <div class="mt-1 mb-5 mx-5 px-5" id="about">
+        </div>
+            
+        <form>
+            <div class="row">
+                <div class="mb-5 col-12 col-sm-12 col-md-6 col-lg-4">
+                    <label class="mb-1" for="id">Employee Id</label>
+                    <input type="text" class="form-control" id="id" name="id" disabled>
+                </div>
+                <div class="mb-5 col-12 col-sm-12 col-md-6 col-lg-4">
+                    <label for="profile" class="form-label mb-1">Profile</label>
+                    <input class="form-control" type="file" id="profile" disabled>
+                </div>
+                <div class="mb-5 col-12 col-sm-12 col-md-12 col-lg-4">
+                    <label class="mb-1" for="email">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" disabled>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-5 col-12 col-sm-12 col-md-4">
+                    <label class="mb-1" for="fname">First Name</label>
+                    <input type="text" class="form-control" id="fname" name="fname" disabled>
+                </div>
+                <div class="mb-5 col-12 col-sm-12 col-md-4">
+                    <label class="mb-1" for="mname">Middle Name</label>
+                    <input type="text" class="form-control" id="mname" name="mname" disabled>
+                </div>
+                <div class="mb-5 col-12 col-sm-12 col-md-4">
+                    <label class="mb-1" for="lname">Last Name</label>
+                    <input type="text" class="form-control" id="lname" name="lname" disabled>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-5 col-12 col-sm-12 col-lg-4">
+                    <label for="age" class="form-label mt-1">Age&nbsp;&nbsp;</label><input type="text" class="text-center w-25" id="ageVal" disabled>
+                    <input type="range" id="age" class="form-range" min="20" max="50" step="1" oninput="this.previousElementSibling.value = this.value" disabled>
+                </div>
+                <div class="mb-5 col-12 col-sm-12 col-md-6 col-lg-4">
+                    <label class="mt-1" for="gender">Gender</label>
+                    <select class="form-select my-1" id="gender" disabled>
+                        <option selected>Choose...</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-5 col-12 col-sm-12 col-md-6 col-lg-4">
+                    <label for="designation" class="form-label">Designation</label>
+                    <input type="text" id="designation" name="designation" class="form-control" disabled>
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-5 col-12 col-sm-12 col-lg-4">
+                    <label for="experience" class="form-label mt-1">Experience&nbsp;&nbsp;</label><input type="text" class="text-center w-25" id="experienceVal" disabled>
+                    <input type="range" id="experience" class="form-range" min="1" max="30" step="0.5" oninput="this.previousElementSibling.value = this.value" disabled>
+                </div>
+                <div class="mb-5 col-12 col-sm-12 col-md-6 col-lg-4">
+                    <label for="skills" class="form-label">Skills&nbsp;</label>
+                    <input type="text" id="skills" name="skills" class="form-control" disabled>
+                </div>
+                <div class="mb-5 col-12 col-sm-12 col-md-6 col-lg-4">
+                    <label for="salary" class="form-label">Salary</label>
+                    <input type="text" id="salary" name="salary" class="form-control" disabled>
+                </div>
+            </div>
+        </form>
+
+        <div id="salary" class="row my-3 text-center">
+            <div class="col">
+                <button class="btn btn-primary ms-3" id="editBtn">Edit</button>
+                <button class="btn btn-primary ms-3" id="updateBtn" hidden>
+                    Update
+                    <a id="#"></a>
+                </button> 
+                <button class="btn btn-primary ms-3" id="deleteBtn">Delete</button>
+                <button class="btn btn-primary ms-3" onclick="location.href='index.html'">Back</button>
+            </div>
+        </div>
+      </div>
+
+    <!-- footer started -->
+    <div class="container-fluid" id="footer-container">
+        <footer class="footer">
+            <div id="footer-div" class="text-center py-1">
+                <p class="my-1">Copyright&nbsp;<i class="fa fa-copyright" style="color: white;"></i>&nbsp;2023&nbsp;Jay Koshti</p>
+                <a href="#" target="_blank">jaykoshti@gmail.com</a>
+            </div>
+        </footer>
+    </div>
+    <!-- footer ended -->
+
+</body>
+
+</html>
